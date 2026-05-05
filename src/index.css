@@ -1,0 +1,111 @@
+:root {
+  --text: #F5E6CA; /* Колір старого паперу */
+  --accent: #D4AF37; /* Латунь/Золото */
+  --bg-deep: #2D1C12; /* Глибоке темне дерево */
+  --bg-card: #422B1E; /* Світліше дерево для карток */
+  --border: #D4AF37; 
+  --shadow: rgba(0, 0, 0, 0.6) 0px 10px 20px;
+}
+
+body {
+  margin: 0;
+  background-color: #1a100a;
+  font-family: 'EB Garamond', serif; /* Вінтажний шрифт */
+  color: var(--text);
+}
+
+#root {
+  max-width: 1126px; /* Виправляємо фіксовану ширину */
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  /* Градієнт, що імітує вертикальні волокна дерева */
+  background: linear-gradient(to right, #2D1C12, #3E2719, #2D1C12);
+  border-left: 4px solid #1a0f0a;
+  border-right: 4px solid #1a0f0a;
+  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+  padding-bottom: 50px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  color: var(--accent);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  margin-top: 40px;
+  letter-spacing: 2px;
+}
+.title-wrapper {
+  text-align: center; /* Центруємо вміст */
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+h1 {
+  display: inline-block; /* Щоб рамка була тільки навколо тексту */
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: var(--accent); /* Наш латунний колір #D4AF37 */
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 40px auto;
+  
+  /* Ефект гравіювання: темна тінь для глибини та легке сяйво латуні */
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8), 
+               0 0 15px rgba(212, 175, 55, 0.2);
+  
+  /* Додамо елегантні лінії з боків або знизу */
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 10px;
+  position: relative;
+}
+
+/* Додамо декоративні елементи з боків (як на старих вивісках) */
+h1::before, h1::after {
+  content: "✦";
+  font-size: 24px;
+  margin: 0 20px;
+  vertical-align: middle;
+  opacity: 0.8;
+}
+
+h1, h2 {
+  font-family: var(--heading);
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 46px;
+    margin: 20px 0;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0 0 8px;
+}
+
+p {
+  margin: 0;
+}
+
+code, .counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
